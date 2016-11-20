@@ -21,7 +21,7 @@ public class CueController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        rb.AddForce(new Vector3(moveHorizontal, 0, moveVertical)*100);
+        rb.AddForce(new Vector3(moveHorizontal, 0, moveVertical)*25);
     }
 
     //void OnCollisionEnter(Collision collision)
