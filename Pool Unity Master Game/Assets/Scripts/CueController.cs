@@ -13,9 +13,10 @@ public class CueController : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (Input.GetKeyDown(KeyCode.Space))
-            Debug.Log("Space key was pressed.");
-
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    Debug.Log("Space key was pressed.");
+        //}
     }
 
     void FixedUpdate()
@@ -23,7 +24,7 @@ public class CueController : MonoBehaviour {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        rb.AddForce(new Vector3(moveHorizontal, 0, moveVertical)*1000);
+        rb.AddForce(new Vector3(moveHorizontal, 0, moveVertical)*10);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -34,9 +35,11 @@ public class CueController : MonoBehaviour {
 
     public void OnGUI()
     {
-        if (Event.current.type == EventType.KeyDown)
+        if (Event.current.keyCode == KeyCode.Space && Event.current.type == EventType.KeyDown)
         {
-            Debug.Log(" pressed: " + Event.current.keyCode);
+            rb.AddForce(new Vector3(0, 0, 500));
+
+
         }
     }
 
