@@ -6,11 +6,14 @@ namespace Assets.Scripts
   {
     private Rigidbody _rigidbody;
 
+    private float _moveHorizontal;
+    private float _moveVertical;
+
     void Start()
     {
       _rigidbody = GetComponent<Rigidbody>();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -22,10 +25,13 @@ namespace Assets.Scripts
 
     void FixedUpdate()
     {
-      float moveHorizontal = Input.GetAxis("Horizontal_Cue");
-      float moveVertical = Input.GetAxis("Vertical_Cue");
+      _moveHorizontal = Input.GetAxis(InputAxes.HorizontalCue);
+      _moveHorizontal = Input.GetAxis(InputAxes.RightStickX);
 
-      _rigidbody.AddForce(new Vector3(moveHorizontal, 0, moveVertical) * 10);
+      _moveVertical = Input.GetAxis(InputAxes.VerticalCue);
+      _moveVertical = -Input.GetAxis(InputAxes.RightStickY);
+
+      _rigidbody.AddForce(new Vector3(_moveHorizontal, 0, _moveVertical) * 10);
     }
 
     void OnCollisionEnter(Collision collision)

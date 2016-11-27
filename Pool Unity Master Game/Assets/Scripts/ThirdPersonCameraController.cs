@@ -33,12 +33,15 @@ namespace Assets.Scripts
     // Update is called once per frame
     private void Update()
     {
-      _positionX -= Input.GetAxis("Horizontal_Camera");
+      _positionX -= Input.GetAxis(InputAxes.HorizontalCamera);
+      _positionX -= Input.GetAxis(InputAxes.LeftStickX);
 
-      _positionY += Input.GetAxis("Vertical_Camera");
+      _positionY += Input.GetAxis(InputAxes.VerticalCamera);
+      _positionY -= Input.GetAxis(InputAxes.LeftStickY);
       _positionY = Mathf.Clamp(_positionY, PositionYMin, PositionYMax);
 
-      _fieldOfView += Input.GetAxis("Zoom");
+      _fieldOfView += Input.GetAxis(InputAxes.KeyboardZoom);
+      _fieldOfView += Input.GetAxis(InputAxes.JoystickZoom);
       _fieldOfView = Mathf.Clamp(_fieldOfView, FieldOfViewMin, FieldOfViewMax);
 
       var rotationQuaternion = Quaternion.Euler(0, _positionX, _positionY);
