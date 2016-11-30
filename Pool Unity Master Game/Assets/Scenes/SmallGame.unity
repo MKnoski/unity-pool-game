@@ -189,7 +189,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &176188071
 MeshFilter:
@@ -206,8 +206,8 @@ Rigidbody:
   m_GameObject: {fileID: 176188068}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -276,7 +276,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269474504}
   m_LocalRotation: {x: 0.059567694, y: 0, z: 0, w: 0.99822426}
-  m_LocalPosition: {x: -0, y: 0.44, z: -2.58}
+  m_LocalPosition: {x: -0, y: 0.48, z: -2.579}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_LocalEulerAnglesHint: {x: 6.83, y: 0, z: 0}
   m_Children:
@@ -456,7 +456,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &407049868
 MeshFilter:
@@ -472,7 +472,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 407049865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.303, z: -1.178}
+  m_LocalPosition: {x: 0, y: 0.303, z: -1.1738}
   m_LocalScale: {x: 0.08, y: 0.08, z: 0.08}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
@@ -486,8 +486,8 @@ Rigidbody:
   m_GameObject: {fileID: 407049865}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -551,7 +551,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &408026146
 MeshFilter:
@@ -568,8 +568,8 @@ Rigidbody:
   m_GameObject: {fileID: 408026143}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -709,7 +709,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &497471218
 MeshFilter:
@@ -726,8 +726,8 @@ Rigidbody:
   m_GameObject: {fileID: 497471215}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -804,7 +804,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &526358724
 MeshFilter:
@@ -821,8 +821,8 @@ Rigidbody:
   m_GameObject: {fileID: 526358721}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -903,7 +903,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &827080036
 MeshFilter:
@@ -920,8 +920,8 @@ Rigidbody:
   m_GameObject: {fileID: 827080033}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -998,7 +998,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &838127102
 MeshFilter:
@@ -1015,8 +1015,8 @@ Rigidbody:
   m_GameObject: {fileID: 838127099}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1093,7 +1093,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &988993167
 MeshFilter:
@@ -1110,8 +1110,8 @@ Rigidbody:
   m_GameObject: {fileID: 988993164}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1270,7 +1270,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1178336079
 MeshFilter:
@@ -1287,8 +1287,8 @@ Rigidbody:
   m_GameObject: {fileID: 1178336076}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1631,7 +1631,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1321779491
 MeshFilter:
@@ -1648,8 +1648,8 @@ Rigidbody:
   m_GameObject: {fileID: 1321779488}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1805,7 +1805,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1595058949
 MeshFilter:
@@ -1822,8 +1822,8 @@ Rigidbody:
   m_GameObject: {fileID: 1595058946}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1900,7 +1900,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1620753027
 MeshFilter:
@@ -1917,8 +1917,8 @@ Rigidbody:
   m_GameObject: {fileID: 1620753024}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2161,7 +2161,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1926001875
 MeshFilter:
@@ -2178,8 +2178,8 @@ Rigidbody:
   m_GameObject: {fileID: 1926001872}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2256,7 +2256,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1967321819
 MeshFilter:
@@ -2273,8 +2273,8 @@ Rigidbody:
   m_GameObject: {fileID: 1967321816}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2383,7 +2383,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2098496830
 MeshFilter:
@@ -2400,8 +2400,8 @@ Rigidbody:
   m_GameObject: {fileID: 2098496827}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -2478,7 +2478,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.65
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &2099890888
 MeshFilter:
@@ -2495,8 +2495,8 @@ Rigidbody:
   m_GameObject: {fileID: 2099890885}
   serializedVersion: 2
   m_Mass: 0.2
-  m_Drag: 0.3
-  m_AngularDrag: 0.3
+  m_Drag: 0.05
+  m_AngularDrag: 0.01
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
