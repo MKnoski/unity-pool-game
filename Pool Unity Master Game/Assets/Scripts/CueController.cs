@@ -1,46 +1,51 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class CueController : MonoBehaviour {
+namespace Assets.Scripts
+{
+  public class CueController : MonoBehaviour
+  {
+    private Rigidbody _rigidbody;
 
-    private Rigidbody rb;
+    private float _moveHorizontal;
+    private float _moveVertical;
 
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+      _rigidbody = GetComponent<Rigidbody>();
     }
 
-
     // Update is called once per frame
-    void Update () {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    Debug.Log("Space key was pressed.");
-        //}
+    void Update()
+    {
+      //if (Input.GetKeyDown(KeyCode.Space))
+      //{
+      //    Debug.Log("Space key was pressed.");
+      //}
     }
 
     void FixedUpdate()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+      _moveHorizontal = Input.GetAxis(InputAxes.HorizontalCue);
+ //     _moveHorizontal = Input.GetAxis(InputAxes.RightStickX);
 
-        rb.AddForce(new Vector3(moveHorizontal, 0, moveVertical)*10);
+      _moveVertical = Input.GetAxis(InputAxes.VerticalCue);
+ //     _moveVertical = -Input.GetAxis(InputAxes.RightStickY);
+
+      _rigidbody.AddForce(new Vector3(_moveHorizontal, 0, _moveVertical) * 10);
     }
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log( " collected: " + collision.collider.name);
-        rb.velocity = Vector3.zero;
+      Debug.Log(" collected: " + collision.collider.name);
+      _rigidbody.velocity = Vector3.zero;
     }
 
     public void OnGUI()
     {
-        if (Event.current.keyCode == KeyCode.Space && Event.current.type == EventType.KeyDown)
-        {
-            rb.AddForce(new Vector3(0, 0, 500));
-
-
-        }
+      if (Event.current.keyCode == KeyCode.Space && Event.current.type == EventType.KeyDown)
+      {
+        _rigidbody.AddForce(new Vector3(0, 0, 500));
+      }
     }
-
+  }
 }
