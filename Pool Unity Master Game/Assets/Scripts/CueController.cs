@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Assets.Scripts
 {
@@ -19,7 +20,7 @@ namespace Assets.Scripts
     {
       //if (Input.GetKeyDown(KeyCode.Space))
       //{
-      //    Debug.Log("Space key was pressed.");
+      //  Debug.Log("Space key was pressed.");
       //}
     }
 
@@ -34,13 +35,27 @@ namespace Assets.Scripts
       _rigidbody.AddForce(new Vector3(_moveHorizontal, 0, _moveVertical) * 10);
     }
 
+    void LateUpdate()
+    {
+      if (Input.GetKeyDown(KeyCode.R))
+      {
+        _rigidbody.AddForce(new Vector3(0, 0, 500));
+      }
+
+      if (Input.GetButtonDown(InputAxes.HitCue))
+      {
+        _rigidbody.AddForce(new Vector3(0, 0, 500));
+      }
+
+    }
+
     void OnCollisionEnter(Collision collision)
     {
       Debug.Log(" collected: " + collision.collider.name);
       _rigidbody.velocity = Vector3.zero;
     }
 
-    public void OnGUI()
+    void OnGUI() // działa tylko przy statycznej kamerze
     {
       if (Event.current.keyCode == KeyCode.Space && Event.current.type == EventType.KeyDown)
       {

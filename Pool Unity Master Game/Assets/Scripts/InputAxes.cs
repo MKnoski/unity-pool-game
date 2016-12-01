@@ -16,5 +16,7 @@
 
     public static string HorizontalCue = "Horizontal_Cue";
     public static string VerticalCue = "Vertical_Cue";
+
+    public static string HitCue = "Hit_Cue";
   }
 }
