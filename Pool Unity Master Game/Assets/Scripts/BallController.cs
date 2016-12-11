@@ -1,34 +1,42 @@
 ﻿using UnityEngine;
-using System.Collections;
 
 public class BallController : MonoBehaviour
 {
-
     private Rigidbody _rigidbody;
+    private AudioSource audioSource;
 
-	// Use this for initialization
-	void Start ()
-	{
-	    _rigidbody = GetComponent<Rigidbody>();
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-
-    void LateUpdate()
+    // Use this for initialization
+    private void Start()
     {
-        if (_rigidbody.velocity.magnitude < 0.3 && _rigidbody.velocity.magnitude>0)
+        this._rigidbody = GetComponent<Rigidbody>();
+        this.audioSource = GetComponentInParent<AudioSource>();
+    }
+
+    // Update is called once per frame
+    private void Update()
+    {
+    }
+
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.transform.parent.name == "Balls")
         {
-            if (_rigidbody.velocity.magnitude > 0.03)
+            this.audioSource.Play();
+        }
+    }
+
+    private void LateUpdate()
+    {
+        if ((this._rigidbody.velocity.magnitude < 0.3) && (this._rigidbody.velocity.magnitude > 0)) { }
+        {
+            if (this._rigidbody.velocity.magnitude > 0.03)
             {
-                _rigidbody.velocity *= (float)0.9;
+                this._rigidbody.velocity *= (float)0.9;
             }
             else
             {
-                _rigidbody.velocity = Vector3.zero;
-                _rigidbody.angularVelocity = Vector3.zero;
+                this._rigidbody.velocity = Vector3.zero;
+                this._rigidbody.angularVelocity = Vector3.zero;
             }
         }
     }
