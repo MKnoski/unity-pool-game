@@ -27,7 +27,7 @@ public class BallController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if ((this._rigidbody.velocity.magnitude < 0.3) && (this._rigidbody.velocity.magnitude > 0)) { }
+        if ((this._rigidbody.velocity.magnitude < 0.3) && (this._rigidbody.velocity.magnitude > 0))
         {
             if (this._rigidbody.velocity.magnitude > 0.03)
             {
