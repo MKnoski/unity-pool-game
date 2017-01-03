@@ -43,7 +43,7 @@ namespace Assets.Scripts
 
             this._moveUpDown = Input.GetAxis(InputAxes.HeightCue);
 
-            this._rigidbody.transform.Translate(new Vector3(this._moveHorizontal, this._moveUpDown, this._moveVertical)*(float) 0.01, Space.World);
+            this._rigidbody.transform.Translate(new Vector3(this._moveHorizontal, this._moveUpDown, this._moveVertical)*(float) 0.01);
             this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, Vector3.up, this._rotateHorizontal);
             this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, this.transform.right, this._rotateVertical);
             //     _rigidbody.AddForce(new Vector3(_moveHorizontal, 0, _moveVertical) * 10);
