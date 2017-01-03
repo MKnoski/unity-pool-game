@@ -18,5 +18,8 @@
     public static string VerticalCue = "Vertical_Cue";
 
     public static string HitCue = "Hit_Cue";
+    public static string HeightCue = "Height_Cue";
+    public static string RotateVerticalCue = "RotateVertical_Cue";
+    public static string RotateHorizontalCue = "RotateHorizontal_Cue";
   }
 }

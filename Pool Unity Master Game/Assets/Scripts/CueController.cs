@@ -9,7 +9,10 @@ namespace Assets.Scripts
         private Rigidbody _rigidbody;
         private float _rotateHorizontal;
         private float _rotateVertical;
+        private float _moveUpDown;
         private AudioSource audioSource;
+
+        public bool ShowAxes = true;
 
         private void Start()
         {
@@ -29,27 +32,33 @@ namespace Assets.Scripts
         private void FixedUpdate()
         {
             this._moveHorizontal = Input.GetAxis(InputAxes.RightStickX);
+            this._moveHorizontal = Input.GetAxis(InputAxes.HorizontalCue);
             this._rotateHorizontal = Input.GetAxis(InputAxes.LeftStickX);
-            this._rotateHorizontal = Input.GetAxis(InputAxes.HorizontalCue);
+            this._rotateHorizontal = Input.GetAxis(InputAxes.RotateHorizontalCue);
 
             this._moveVertical = -Input.GetAxis(InputAxes.RightStickY);
+            this._moveVertical = Input.GetAxis(InputAxes.VerticalCue);
             this._rotateVertical = Input.GetAxis(InputAxes.LeftStickY);
-            this._rotateVertical = Input.GetAxis(InputAxes.VerticalCue);
-            this._rigidbody.transform.Translate(new Vector3(this._moveHorizontal, 0, this._moveVertical)*(float) 0.01);
-            this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, Vector3.up,
-                this._rotateHorizontal);
-            this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, Vector3.right,
-                this._rotateVertical);
+            this._rotateVertical = Input.GetAxis(InputAxes.RotateVerticalCue);
+
+            this._moveUpDown = Input.GetAxis(InputAxes.HeightCue);
+
+            this._rigidbody.transform.Translate(new Vector3(this._moveHorizontal, this._moveUpDown, this._moveVertical)*(float) 0.01, Space.World);
+            this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, Vector3.up, this._rotateHorizontal);
+            this._rigidbody.transform.RotateAround(this._rigidbody.position + transform.forward, this.transform.right, this._rotateVertical);
             //     _rigidbody.AddForce(new Vector3(_moveHorizontal, 0, _moveVertical) * 10);
         }
 
         private void OnDrawGizmos()
         {
-            Gizmos.DrawLine(this._rigidbody.position + transform.forward + transform.right,
-                this._rigidbody.position + transform.forward - transform.right);
-            Gizmos.DrawLine(this._rigidbody.position + transform.forward + transform.up,
-                this._rigidbody.position + transform.forward - transform.up);
-            Gizmos.DrawLine(this._rigidbody.position, this._rigidbody.position + this._rigidbody.transform.forward*10);
+            if (ShowAxes)
+            {
+                Gizmos.DrawLine(this._rigidbody.position + transform.forward + this.transform.right,
+                    this._rigidbody.position + transform.forward - this.transform.right);
+                Gizmos.DrawLine(this._rigidbody.position + transform.forward + Vector3.up,
+                    this._rigidbody.position + transform.forward - Vector3.up);
+                Gizmos.DrawLine(this._rigidbody.position, this._rigidbody.position + this._rigidbody.transform.forward * 10);
+            }
         }
 
         private void LateUpdate()
