@@ -185,8 +185,8 @@ InputManager:
     m_Name: JoystickZoom
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: joystick button 2
-    positiveButton: joystick button 0
+    negativeButton: joystick button 4
+    positiveButton: joystick button 5
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -204,7 +204,7 @@ InputManager:
     negativeButton: 
     positiveButton: joystick button 1
     altNegativeButton: 
-    altPositiveButton: 
+    altPositiveButton: r
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
@@ -253,13 +253,13 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
+    gravity: 0
+    dead: 0
     sensitivity: 1
     snap: 1
     invert: 0
     type: 2
-    axis: 3
+    axis: 27
     joyNum: 0
   - serializedVersion: 3
     m_Name: RightStickY
@@ -269,13 +269,13 @@ InputManager:
     positiveButton: 
     altNegativeButton: 
     altPositiveButton: 
-    gravity: 1000
-    dead: 0.001
+    gravity: 0
+    dead: 0
     sensitivity: 1
     snap: 1
     invert: 0
     type: 2
-    axis: 2
+    axis: 26
     joyNum: 0
   - serializedVersion: 3
     m_Name: Cancel
@@ -297,10 +297,10 @@ InputManager:
     m_Name: Height_Cue
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 7
-    positiveButton: 9
-    altNegativeButton: 
-    altPositiveButton: 
+    negativeButton: l
+    positiveButton: o
+    altNegativeButton: joystick button 0
+    altPositiveButton: joystick button 2
     gravity: 3
     dead: 0.001
     sensitivity: 3
