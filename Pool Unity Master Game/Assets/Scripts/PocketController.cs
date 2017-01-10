@@ -7,13 +7,17 @@ public class PocketController : MonoBehaviour
 {
     public Text ScoreText;
     public Text WinningText;
+    public AudioSource Applause;
 
     private short score = 0;
     private short NumberOfBalls = 15;
+    private AudioSource audioSource;
 
     // Use this for initialization
     void Start()
     {
+        this.audioSource = GetComponentInParent<AudioSource>();
+
         this.WinningText.enabled = false;
         this.DisplayScore();
     }
@@ -25,6 +29,11 @@ public class PocketController : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.Play();
+        }
+
         if (col.gameObject.name == "Ball_0")
         {
             this.WinningText.text = "Game over - white ball potted";
@@ -46,6 +55,7 @@ public class PocketController : MonoBehaviour
         if (this.score == this.NumberOfBalls)
         {
             this.WinningText.enabled = true;
+            this.Applause.Play();
         }
     }
 
