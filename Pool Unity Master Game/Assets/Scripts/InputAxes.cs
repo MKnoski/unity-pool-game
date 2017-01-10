@@ -21,8 +21,8 @@
 
     public static string HeightCue = "Height_Cue";
 
-    public static string RotateHorizontalCueDirectionPad = "RotateHorizontal_Cue_DirectionPad";
-    public static string RotateVerticalCueDirectionPad = "RotateVertical_Cue_DirectionPad";
+    public static string DirectionPadX = "DirectionPad_X";
+    public static string DirectionPadY = "DirectionPad_Y";
     public static string RotateVerticalCue = "RotateVertical_Cue";
     public static string RotateHorizontalCue = "RotateHorizontal_Cue";
   }
