@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
@@ -21,7 +22,15 @@ public class BallController : MonoBehaviour
     {
         if (col.gameObject.transform.parent.name == "Balls")
         {
-            this.audioSource.Play();
+            Debug.Log("Object:  " + this._rigidbody.velocity.magnitude + "\t" + "Colider  " + col.rigidbody.velocity.magnitude);
+            if (this._rigidbody.velocity.magnitude > 1.0)
+            {
+                if (!audioSource.isPlaying)
+                {
+                    audioSource.Play();
+                }
+            }
+            
         }
     }
 
