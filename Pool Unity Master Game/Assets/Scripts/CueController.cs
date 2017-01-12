@@ -14,6 +14,7 @@ namespace Assets.Scripts
     private float _moveUpDown;
 
     public bool ShowAxes = true;
+	public float Power = 500;
 
     private void Start()
     {
@@ -67,7 +68,7 @@ namespace Assets.Scripts
 
       _moveUpDown = Input.GetAxis(InputAxes.HeightCue);
 
-      _rigidbody.transform.Translate(new Vector3(_moveHorizontal, _moveUpDown, _moveVertical) * (float)0.01);
+      _rigidbody.transform.Translate(new Vector3(_moveHorizontal, _moveUpDown, _moveVertical) * (float)0.01,  Space.World);
       _rigidbody.transform.RotateAround(_rigidbody.position + transform.forward, Vector3.up, _rotateHorizontal);
       _rigidbody.transform.RotateAround(_rigidbody.position + transform.forward, transform.right, _rotateVertical);
 
@@ -90,7 +91,7 @@ namespace Assets.Scripts
     {
       if (Input.GetButtonDown(InputAxes.HitCue))
       {
-        _rigidbody.AddForce(_rigidbody.transform.forward * 500);
+        _rigidbody.AddForce(_rigidbody.transform.forward * Power);
       }
     }
 
@@ -111,7 +112,7 @@ namespace Assets.Scripts
     {
       if ((Event.current.keyCode == KeyCode.Space) && (Event.current.type == EventType.KeyDown))
       {
-        _rigidbody.AddForce(new Vector3(0, 0, 500));
+        _rigidbody.AddForce(new Vector3(0, 0, Power));
       }
     }
   }
