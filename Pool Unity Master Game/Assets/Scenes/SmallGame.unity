@@ -1901,7 +1901,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.001
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -4441,6 +4441,10 @@ Prefab:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 103444, guid: e908a7fc6f075614290c0bda1feacbaa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e908a7fc6f075614290c0bda1feacbaa, type: 2}
   m_IsPrefabParent: 0
@@ -5561,7 +5565,7 @@ Light:
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
+    m_Bias: 0.001
     m_NormalBias: 0.4
     m_NearPlane: 0.2
   m_Cookie: {fileID: 0}
@@ -6233,6 +6237,10 @@ Prefab:
     - target: {fileID: 135306, guid: e908a7fc6f075614290c0bda1feacbaa, type: 2}
       propertyPath: m_Name
       value: Lamp
+      objectReference: {fileID: 0}
+    - target: {fileID: 103444, guid: e908a7fc6f075614290c0bda1feacbaa, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e908a7fc6f075614290c0bda1feacbaa, type: 2}
