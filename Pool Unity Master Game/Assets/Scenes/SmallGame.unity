@@ -769,7 +769,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c6e5fec8c42d6b449c454572fdf4c04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ShowAxes: 1
+  WhiteBall: {fileID: 407049865}
+  ShowAxes: 0
 --- !u!136 &269474506
 CapsuleCollider:
   m_ObjectHideFlags: 0

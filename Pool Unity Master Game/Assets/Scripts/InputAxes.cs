@@ -18,6 +18,7 @@
     public static string VerticalCue = "Vertical_Cue";
     
     public static string HitCue = "Hit_Cue";
+    public static string SetCue = "Set_Cue";
 
     public static string HeightCue = "Height_Cue";
 

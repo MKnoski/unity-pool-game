@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
+    public int MovingBalls { get { return movingBalls; } }
+    private static int movingBalls = 0;
     private Rigidbody _rigidbody;
     private AudioSource audioSource;
+    private bool isMoving = false;
 
     // Use this for initialization
     private void Start()
@@ -46,7 +49,18 @@ public class BallController : MonoBehaviour
             {
                 this._rigidbody.velocity = Vector3.zero;
                 this._rigidbody.angularVelocity = Vector3.zero;
+                if (this.isMoving)
+                {
+                    this.isMoving = false;
+                    movingBalls--;
+                }
             }
+        }
+
+        if (!this.isMoving && this._rigidbody.velocity.magnitude > 0.03)
+        {
+            this.isMoving = true;
+            movingBalls++;
         }
     }
 }
