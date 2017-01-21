@@ -1,22 +1,31 @@
-﻿using System;
+﻿//////////////////////////////////////////////////////////////////////////
+//// GRAFIKA 3D I SYSTEMY MULTIMEDIALNE 1 - LABORATORIUM
+//// "Gra w bilard" 
+////
+//// Autorzy:
+//// Maksymilian Knoski, Piotr Danowski, Adam Szady, Konrad Puchalski
+//// 
+//// Prowadzący:
+//// dr inż. Jan Nikodem
+//////////////////////////////////////////////////////////////////////////
+
 using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
     public int MovingBalls { get { return movingBalls; } }
+
     private static int movingBalls = 0;
     private Rigidbody _rigidbody;
     private AudioSource audioSource;
     private bool isMoving = false;
 
-    // Use this for initialization
     private void Start()
     {
         this._rigidbody = GetComponent<Rigidbody>();
         this.audioSource = GetComponentInParent<AudioSource>();
     }
 
-    // Update is called once per frame
     private void Update()
     {
     }
@@ -32,8 +41,7 @@ public class BallController : MonoBehaviour
                 {
                     audioSource.Play();
                 }
-            }
-            
+            }           
         }
     }
 

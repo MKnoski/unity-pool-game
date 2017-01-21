@@ -1,4 +1,16 @@
-﻿using UnityEngine;
+﻿//////////////////////////////////////////////////////////////////////////
+//// GRAFIKA 3D I SYSTEMY MULTIMEDIALNE 1 - LABORATORIUM
+//// "Gra w bilard" 
+////
+//// Autorzy:
+//// Maksymilian Knoski, Piotr Danowski, Adam Szady, Konrad Puchalski
+//// 
+//// Prowadzący:
+//// dr inż. Jan Nikodem
+//////////////////////////////////////////////////////////////////////////
+
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Assets.Scripts
 {
@@ -15,8 +27,10 @@ namespace Assets.Scripts
 
         private float _power;
         private BallController _whiteBallController;
+
         public GameObject WhiteBall;
         public bool ShowAxes = true;
+        public Slider PowerSlider;
 
         private void Start()
         {
@@ -25,10 +39,8 @@ namespace Assets.Scripts
             _whiteBallController = WhiteBall.GetComponent<BallController>();
         }
 
-        // Update is called once per frame
         private void Update()
         {
-
         }
 
         private void FixedUpdate()
@@ -72,8 +84,9 @@ namespace Assets.Scripts
             _rigidbody.transform.RotateAround(WhiteBall.transform.position, Vector3.up, _rotateHorizontal);
             _power = (WhiteBall.transform.position - transform.position).magnitude - 1.5f;
 
-            _moveVertical = _rotateHorizontal = _rotateVertical = 0f;
+            this.PowerSlider.value = this._power;
 
+            _moveVertical = _rotateHorizontal = _rotateVertical = 0f;
         }
 
         private void OnDrawGizmos()
@@ -102,14 +115,9 @@ namespace Assets.Scripts
                 _rigidbody.transform.position = new Vector3(WhiteBall.transform.position.x, 0.4f, WhiteBall.transform.position.z - 1.5f);
             }
 
-
             if (_whiteBallController.MovingBalls > 0)
             {
                 _rigidbody.transform.position = new Vector3(_rigidbody.position.x, 0.8f, _rigidbody.position.z);
-            }
-            else
-            {
-                //        _rigidbody.transform.position = new Vector3(_rigidbody.position.x, 0.4f, _rigidbody.position.z);
             }
         }
 
@@ -135,10 +143,9 @@ namespace Assets.Scripts
                 _rigidbody.transform.position = new Vector3(WhiteBall.transform.position.x, 0.4f, WhiteBall.transform.position.z - 1.5f);
                 _rigidbody.transform.RotateAround(WhiteBall.transform.position, transform.right, 10);
             }
-
         }
 
-        private void OnGUI() // działa tylko przy statycznej kamerze
+        private void OnGUI()
         {
             if ((Event.current.keyCode == KeyCode.Space) && (Event.current.type == EventType.KeyDown))
             {

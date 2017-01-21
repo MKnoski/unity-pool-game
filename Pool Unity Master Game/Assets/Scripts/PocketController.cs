@@ -1,5 +1,15 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿//////////////////////////////////////////////////////////////////////////
+//// GRAFIKA 3D I SYSTEMY MULTIMEDIALNE 1 - LABORATORIUM
+//// "Gra w bilard" 
+////
+//// Autorzy:
+//// Maksymilian Knoski, Piotr Danowski, Adam Szady, Konrad Puchalski
+//// 
+//// Prowadzący:
+//// dr inż. Jan Nikodem
+//////////////////////////////////////////////////////////////////////////
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,7 +23,6 @@ public class PocketController : MonoBehaviour
     private short NumberOfBalls = 15;
     private AudioSource audioSource;
 
-    // Use this for initialization
     void Start()
     {
         this.audioSource = GetComponentInParent<AudioSource>();
@@ -22,7 +31,6 @@ public class PocketController : MonoBehaviour
         this.DisplayScore();
     }
 
-    // Update is called once per frame
     void Update()
     {
     }
