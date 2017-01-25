@@ -13,8 +13,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class PocketController : MonoBehaviour
+namespace Assets.Scripts
 {
+  public class PocketController : MonoBehaviour
+  {
     public Text ScoreText;
     public Text WinningText;
     public AudioSource Applause;
@@ -25,10 +27,10 @@ public class PocketController : MonoBehaviour
 
     void Start()
     {
-        this.audioSource = GetComponentInParent<AudioSource>();
+      this.audioSource = GetComponentInParent<AudioSource>();
 
-        this.WinningText.enabled = false;
-        this.DisplayScore();
+      this.WinningText.enabled = false;
+      this.DisplayScore();
     }
 
     void Update()
@@ -37,41 +39,42 @@ public class PocketController : MonoBehaviour
 
     private void OnCollisionEnter(Collision col)
     {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
+      if (!audioSource.isPlaying)
+      {
+        audioSource.Play();
+      }
 
-        if (col.gameObject.name == "Ball_0")
-        {
-            this.WinningText.text = "Game over - white ball potted";
-            this.WinningText.enabled = true;
-            return;
-        }
+      if (col.gameObject.name == "Ball_0")
+      {
+        this.WinningText.text = "Game over - white ball potted";
+        this.WinningText.enabled = true;
+        return;
+      }
 
-        if (col.gameObject.transform.parent.name == "Balls")
-        {
-            this.score++;
-            this.DisplayScore();
-        }
+      if (col.gameObject.transform.parent.name == "Balls")
+      {
+        this.score++;
+        this.DisplayScore();
+      }
     }
 
     private void DisplayScore()
     {
-        this.ScoreText.text = string.Format("Score: {0}/{1}", this.score, this.NumberOfBalls);
+      this.ScoreText.text = string.Format("Score: {0}/{1}", this.score, this.NumberOfBalls);
 
-        if (this.score == this.NumberOfBalls)
-        {
-            this.WinningText.enabled = true;
-            this.Applause.Play();
-        }
+      if (this.score == this.NumberOfBalls)
+      {
+        this.WinningText.enabled = true;
+        this.Applause.Play();
+      }
     }
 
     private void LateUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Delete))
-        {
-            SceneManager.LoadScene(0);
-        }
+      if (Input.GetKeyDown(KeyCode.Delete))
+      {
+        SceneManager.LoadScene(0);
+      }
     }
+  }
 }
